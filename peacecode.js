@@ -16,16 +16,23 @@ function count(string) {
     }
     return obj;
 }
+
+
+The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+
+For example:
+
+1.08 --> 30
+
+function cockroachSpeed(s) {
+  let fastCockroach = (s * 100000) / 3600;
+  return Math.floor(fastCockroach);
+}
 */
 
-let n = -3;
+let a = 1;
+b = 10;
 
-function testEven(n) {
-  if (n % 1 === 0) {
-    if (n % 2 === 0) return true;
-    if (n % 2 === 1) return false;
-  }
-  return false;
-}
+function sumDigPow(a, b) {}
 
-console.log(testEven(n));
+console.log(sumDigPow(a, b));
