@@ -28,11 +28,41 @@ function cockroachSpeed(s) {
   let fastCockroach = (s * 100000) / 3600;
   return Math.floor(fastCockroach);
 }
+
+function points(games) {
+  let totalScore = 0;
+  for (let i = 0; i < games.length; i++) {
+    const [x, _, y] = games[i];
+    if (Number(x) > Number(y)) totalScore += 3;
+    else if (Number(x) === Number(y)) totalScore += 1;
+    else continue;
+  }
+  return totalScore;
+}
+
+function abbrevName(name) {
+  const fullName = name.split(" ");
+  const [firstName, lastName] = fullName;
+  const firstInitial = firstName[0].toUpperCase();
+  const lastInitial = lastName[0].toUpperCase();
+  return `${firstInitial}.${lastInitial}`;
+}
+
+function simpleMultiplication(number) {
+  return number % 2 === 0 ? number * 8 : number * 9;
+}
+
+function solution(nums) {
+  if (nums.includes(null) || nums.length === 0) return [];
+  return nums.sort((a, b) => a - b);
+}
 */
 
-let a = 1;
-b = 10;
+let arr = [1, -4, 7, 12];
 
-function sumDigPow(a, b) {}
+function positiveSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {}
+}
 
-console.log(sumDigPow(a, b));
+console.log(positiveSum(arr));
