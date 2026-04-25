@@ -56,13 +56,51 @@ function solution(nums) {
   if (nums.includes(null) || nums.length === 0) return [];
   return nums.sort((a, b) => a - b);
 }
-*/
-
-let arr = [1, -4, 7, 12];
 
 function positiveSum(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {}
+  return arr
+    .filter((number) => number > 0)
+    .reduce((acc, number) => acc + number, 0);
 }
 
-console.log(positiveSum(arr));
+function smash(words) {
+  let sentence = "";
+
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    sentence += word;
+    if (i < words.length - 1) sentence += " ";
+  }
+
+  return sentence;
+}
+
+function check(a, x) {
+  if (a.includes(x)) return true;
+  return false;
+}
+
+function sumMix(x) {
+  return x
+    .map((number) => Number(number))
+    .reduce((sum, number) => sum + number, 0);
+}
+
+function well(x) {
+  let goodKatas = x.filter((kata) => kata === "good").length;
+  console.log(goodKatas);
+
+  if (goodKatas === 0) return "Fail!";
+  else if (goodKatas < 3) "Publish!";
+  else return "I smell a series!";
+}
+*/
+
+let string = "1,2,3,4,5";
+
+function array(string) {
+  let str = string.split(",").slice(1, -1).join(" ");
+  return str || null;
+}
+
+console.log(array(string));
