@@ -94,13 +94,41 @@ function well(x) {
   else if (goodKatas < 3) "Publish!";
   else return "I smell a series!";
 }
-*/
-
-let string = "1,2,3,4,5";
 
 function array(string) {
   let str = string.split(",").slice(1, -1).join(" ");
   return str || null;
 }
+*/
 
-console.log(array(string));
+let array = [
+  [0, 1, 2, 3, 45],
+  [10, 11, 12, 13, 14],
+  [20, 21, 22, 23, 24],
+  [30, 31, 32, 33, 34],
+];
+
+function toCsvText(array) {
+  let result = "";
+
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) {
+      result += array[i][j];
+      if (j < array[0].length - 1) {
+        result += ",";
+      }
+    }
+    if (i < array.length - 1) {
+      result += "\n";
+    }
+  }
+
+  return result;
+}
+
+let arr = [1, 2, 3];
+let a = arr.join("-");
+
+console.log(a);
+
+console.log(toCsvText(array));
