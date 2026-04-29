@@ -99,14 +99,6 @@ function array(string) {
   let str = string.split(",").slice(1, -1).join(" ");
   return str || null;
 }
-*/
-
-let array = [
-  [0, 1, 2, 3, 45],
-  [10, 11, 12, 13, 14],
-  [20, 21, 22, 23, 24],
-  [30, 31, 32, 33, 34],
-];
 
 function toCsvText(array) {
   let result = "";
@@ -126,9 +118,43 @@ function toCsvText(array) {
   return result;
 }
 
-let arr = [1, 2, 3];
-let a = arr.join("-");
+function isVow(a) {
+  let map = new Map([
+    [97, "a"],
+    [101, "e"],
+    [105, "i"],
+    [111, "o"],
+    [117, "u"],
+  ]);
 
-console.log(a);
+  for (let i = 0; i < a.length; i++) {
+    if (map.has(a[i])) {
+      a.splice(i, 1, map.get(a[i]));
+    }
+  }
 
-console.log(toCsvText(array));
+  return a;
+}
+
+const arrowFunc = function (arr) {
+  return arr.map((num) => String.fromCodePoint(num)).join("");
+};
+*/
+
+let teams = ["Portugal", "Iceland"];
+let scores = [1, 1];
+
+function uefaEuro2016(teams, scores) {
+  const [teamOne, teamTwo] = teams;
+  const [scoreOne, scoreTwo] = scores;
+  return `At match ${teamOne} - ${teamTwo}, 
+    ${
+      scoreOne > scoreTwo
+        ? `${teamOne} won!`
+        : scoreOne < scoreTwo
+          ? `${teamTwo} won!`
+          : `teams played draw`
+    }`;
+}
+
+console.log(uefaEuro2016(teams, scores));
