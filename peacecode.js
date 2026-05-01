@@ -139,10 +139,6 @@ function isVow(a) {
 const arrowFunc = function (arr) {
   return arr.map((num) => String.fromCodePoint(num)).join("");
 };
-*/
-
-let teams = ["Portugal", "Iceland"];
-let scores = [1, 1];
 
 function uefaEuro2016(teams, scores) {
   const [teamOne, teamTwo] = teams;
@@ -156,5 +152,12 @@ function uefaEuro2016(teams, scores) {
           : `teams played draw`
     }`;
 }
+*/
 
-console.log(uefaEuro2016(teams, scores));
+let str = "hello";
+
+function test(str) {
+  return str.slice(1, -1);
+}
+test(str);
+// console.log(removeChar(str));
