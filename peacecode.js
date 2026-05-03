@@ -152,12 +152,52 @@ function uefaEuro2016(teams, scores) {
           : `teams played draw`
     }`;
 }
-*/
 
-let str = "hello";
 
 function test(str) {
   return str.slice(1, -1);
 }
-test(str);
-// console.log(removeChar(str));
+
+function repeatStr(n, s) {
+  let a = s.repeat(n);
+  console.log(a);
+}
+
+
+function DNAtoRNA(input) {
+  let a = input.split("T");
+  console.log(a);
+}
+
+var countSheep = function (input) {
+  let sheep = "";
+
+  if (input === 0) return "";
+
+  for (let i = 1; i <= input; i++) {
+    sheep += `${i}` + " sheep" + "...";
+  }
+
+  return sheep;
+};
+*/
+
+let str = "The greatest victory is that which requires no battle";
+
+function reverseWords(input) {
+  let words = input.split(" ");
+  let result = "";
+
+  for (let i = words.length - 1; i >= 0; i--) {
+    result += words[i];
+
+    if (i !== 0) {
+      result += " ";
+    }
+  }
+
+  return result;
+}
+
+const result = reverseWords(str);
+console.log(result);
