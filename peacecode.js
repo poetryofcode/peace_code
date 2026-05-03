@@ -180,9 +180,6 @@ var countSheep = function (input) {
 
   return sheep;
 };
-*/
-
-let str = "The greatest victory is that which requires no battle";
 
 function reverseWords(input) {
   let words = input.split(" ");
@@ -199,5 +196,17 @@ function reverseWords(input) {
   return result;
 }
 
-const result = reverseWords(str);
+function greet(name, owner) {
+  return name === owner ? "Hello boss" : "Hello guest";
+}
+*/
+
+function bonusTime(salary, bonus) {
+  if (!bonus) {
+    return `£${salary}`;
+  }
+
+  return `£${10 * salary}`;
+}
+const result = bonusTime(10000, true);
 console.log(result);
