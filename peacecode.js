@@ -199,14 +199,36 @@ function reverseWords(input) {
 function greet(name, owner) {
   return name === owner ? "Hello boss" : "Hello guest";
 }
-*/
 
 function bonusTime(salary, bonus) {
   if (!bonus) {
     return `£${salary}`;
   }
-
   return `£${10 * salary}`;
+
+  function strCount(word, char) {
+  if (word.length === 0) return 0;
+
+  let map = new Map();
+
+  for (let letter of word) {
+    if (!map.has(letter)) {
+      map.set(letter, 1);
+    } else {
+      map.set(letter, map.get(letter) + 1);
+    }
+  }
+
+  return map.get(char);
 }
-const result = bonusTime(10000, true);
+}
+*/
+
+let str = "Hello";
+let letter = "l";
+
+String.prototype.isUpperCase = function () {
+  return this === this.toUpperCase();
+};
+// const result = strCount(str, letter);
 console.log(result);
