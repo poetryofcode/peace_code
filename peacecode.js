@@ -222,13 +222,42 @@ function bonusTime(salary, bonus) {
   return map.get(char);
 }
 }
-*/
-
-let str = "Hello";
-let letter = "l";
 
 String.prototype.isUpperCase = function () {
   return this === this.toUpperCase();
 };
-// const result = strCount(str, letter);
+
+function stringy(input) {
+  let result = "";
+  let i = 1;
+  while (i <= 4) {
+    if (i % 2 === 1) result += 1;
+    else result += 0;
+    i++;
+  }
+  return result;
+}
+
+function solution(a, b) {
+  return a.length > b.length ? b + a + b : a + b + a;
+}
+
+function nameShuffler(str) {
+  const [first, last] = str.split(" ");
+  return last + " " + first;
+}
+
+function mouthSize(animal) {
+  return animal.toLowerCase() === "alligator" ? "small" : "wide";
+}
+*/
+
+let string = "hi!!";
+
+function remove(string) {
+  let arr = string.split("");
+  if (arr[arr.length - 1] === "!") arr.pop();
+  return arr.join("");
+}
+const result = remove(string);
 console.log(result);
