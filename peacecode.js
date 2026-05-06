@@ -250,14 +250,26 @@ function nameShuffler(str) {
 function mouthSize(animal) {
   return animal.toLowerCase() === "alligator" ? "small" : "wide";
 }
-*/
-
-let string = "hi!!";
 
 function remove(string) {
   let arr = string.split("");
   if (arr[arr.length - 1] === "!") arr.pop();
   return arr.join("");
 }
-const result = remove(string);
+
+function capitalizeWord(word) {
+  return word.slice(0, 1).toUpperCase() + word.slice(1);
+}
+*/
+
+let number = 5;
+
+function multiTable(number) {
+  let result = "";
+  for (let i = 1; i <= 10; i++) {
+    result += `${i} * ${number} = ${i * number}`;
+  }
+  return result.trim();
+}
+const result = multiTable(number);
 console.log(result);
