@@ -273,12 +273,6 @@ function sayHello(name, city, state) {
   let fullName = name.join(" ");
   return `Hello, ${fullName}! Welcome to ${city}, ${state}!`;
 }
-*/
-
-let s = "This looks5 grea8t!";
-// let a = "4";
-// let b = isNaN(a);
-// console.log(b);
 
 function stringClean(s) {
   let arr = s.split("");
@@ -290,5 +284,19 @@ function stringClean(s) {
   }
   return arr.join("");
 }
-const result = stringClean(s);
+
+function formatMoney(amount) {
+  return "$" + amount.toFixed(2);
+}
+*/
+
+let x = 50;
+
+function apple(x) {
+  return x ** 2 > 1000
+    ? "It's hotter than the sun!!"
+    : "Help yourself to a honeycomb Yorkie for the glovebox.";
+}
+
+const result = apple(x);
 console.log(result);
