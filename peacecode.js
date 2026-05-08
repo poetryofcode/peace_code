@@ -260,9 +260,6 @@ function remove(string) {
 function capitalizeWord(word) {
   return word.slice(0, 1).toUpperCase() + word.slice(1);
 }
-*/
-
-let number = 5;
 
 function multiTable(number) {
   let result = "";
@@ -271,5 +268,27 @@ function multiTable(number) {
   }
   return result.trim();
 }
-const result = multiTable(number);
+
+function sayHello(name, city, state) {
+  let fullName = name.join(" ");
+  return `Hello, ${fullName}! Welcome to ${city}, ${state}!`;
+}
+*/
+
+let s = "This looks5 grea8t!";
+// let a = "4";
+// let b = isNaN(a);
+// console.log(b);
+
+function stringClean(s) {
+  let arr = s.split("");
+  for (let i = 0; i < arr.length; i++) {
+    if (!isNaN(arr[i])) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
+  return arr.join("");
+}
+const result = stringClean(s);
 console.log(result);
