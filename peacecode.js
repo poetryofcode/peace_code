@@ -288,15 +288,25 @@ function stringClean(s) {
 function formatMoney(amount) {
   return "$" + amount.toFixed(2);
 }
-*/
-
-let x = 50;
 
 function apple(x) {
   return x ** 2 > 1000
     ? "It's hotter than the sun!!"
     : "Help yourself to a honeycomb Yorkie for the glovebox.";
 }
+*/
 
-const result = apple(x);
+let card = "9♥";
+
+function defineSuit(card) {
+  let cards = {
+    "♣": "clubs",
+    "♦": "diamonds",
+    "♥": "hearts",
+    "♠": "spades",
+  };
+  return cards[card.slice(-1)];
+}
+
+const result = defineSuit(card);
 console.log(result);
