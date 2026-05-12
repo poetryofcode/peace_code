@@ -294,9 +294,6 @@ function apple(x) {
     ? "It's hotter than the sun!!"
     : "Help yourself to a honeycomb Yorkie for the glovebox.";
 }
-*/
-
-let card = "9♥";
 
 function defineSuit(card) {
   let cards = {
@@ -308,5 +305,30 @@ function defineSuit(card) {
   return cards[card.slice(-1)];
 }
 
-const result = defineSuit(card);
-console.log(result);
+function contamination(text, char) {
+  let arr = text.split("");
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== char) {
+      arr.splice(i, 1, char);
+    }
+  }
+  return arr.join("");
+}
+
+function whoIsPaying(name) {
+  let result = [];
+  if (name.length > 2) {
+    result.push(name, name.slice(0, 2));
+  } else {
+    result.push(name);
+  }
+  return result;
+}
+*/
+
+let name = "Mee";
+
+console.log(name.slice(0, 2));
+
+// const result = whoIsPaying(name);
+// console.log(result);
