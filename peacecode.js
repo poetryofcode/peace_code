@@ -324,11 +324,50 @@ function whoIsPaying(name) {
   }
   return result;
 }
+
+function billboard(name, price = 30) {
+  let total = 0;
+  let arr = name.split("");
+  for (let i = 0; i < arr.length; i++) {
+    total += price;
+  }
+  return total;
+}
+
+function isLochNessMonster(s) {
+  if (s.includes("tree fiddy")) return true;
+  if (s.includes("3.50")) return true;
+  if (s.includes("three fifty")) return true;
+  return false;
+}
 */
 
-let name = "Mee";
+let string = "Jędrzej Błądziński";
 
-console.log(name.slice(0, 2));
+function correctPolishLetters(string) {
+  let result = [];
+  let words = string.split("");
+  const polishLetters = new Map([
+    ["ą", "a"],
+    ["ć", "c"],
+    ["ę", "e"],
+    ["ł", "l"],
+    ["ń", "n"],
+    ["ó", "o"],
+    ["ś", "s"],
+    ["ź", "z"],
+    ["ż", "z"],
+  ]);
 
-// const result = whoIsPaying(name);
-// console.log(result);
+  for (let i = 0; i < words.length; i++) {
+    if (polishLetters.has(words[i])) {
+      result[i] = polishLetters.get(words[i]);
+    } else {
+      result.push(words[i]);
+    }
+  }
+  return result.join("");
+}
+
+const result = correctPolishLetters(string);
+console.log(result);
